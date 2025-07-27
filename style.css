@@ -30,3 +30,16 @@ textarea {
     width: 100%;
     height: 60px;
 }
+
+
+body.azubi .editable,
+body.azubi .feedback-field {
+  display: none;
+}
+
+body.ausbilderin .readonly,
+body.ausbilderin .azubi-comment,
+body.ausbilderin .rating-icon {
+  pointer-events: none;
+  opacity: 0.6;
+}
