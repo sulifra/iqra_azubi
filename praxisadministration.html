@@ -1,24 +1,87 @@
 
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Praxisadministration</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+<meta charset="utf-8"/>
+<title>Praxisadministration</title>
+<link href="styles.css" rel="stylesheet"/>
+<script defer="" src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Praxisadministration</h1>
-        <nav><a href="index.html">Zurück zur Startseite</a></nav>
-    </header>
-    <main>
-        <div class="activity-list" data-lernfeld="Praxisadministration">
-            <!-- Aktivitäten werden hier dynamisch eingefügt -->
-        </div>
-        <div class="controls ausbilderin-only">
-            <button onclick="addActivity('Praxisadministration')">+ Neue Aktivität hinzufügen</button>
-        </div>
-    </main>
-</body>
+<header>
+<h1>Praxisadministration</h1>
+<nav><a href="index.html">Zurück zur Startseite</a></nav>
+</header>
+<main>
+<div class="activity-list" data-lernfeld="Praxisadministration">
+<!-- Aktivitäten werden hier dynamisch eingefügt -->
+</div>
+<div class="controls ausbilderin-only">
+<button onclick="addActivity('Praxisadministration')">+ Neue Aktivität hinzufügen</button>
+</div>
+</main>
+<div id="activities-container"></div><button id="add-activity">+ Neue Aktivität hinzufügen</button><script>
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById("activities-container");
+  const addButton = document.getElementById("add-activity");
+
+  function createActivityElement() {
+    const wrapper = document.createElement("div");
+    wrapper.className = "activity";
+
+    const title = document.createElement("input");
+    title.type = "text";
+    title.className = "activity-title";
+    title.placeholder = "Aktivitätstitel";
+
+    const desc = document.createElement("textarea");
+    desc.className = "activity-description";
+    desc.placeholder = "Beschreibung der Aktivität";
+
+    const taskList = document.createElement("ul");
+    taskList.className = "task-list";
+
+    const taskItem = document.createElement("li");
+    const taskInput = document.createElement("input");
+    taskInput.type = "text";
+    taskInput.className = "task-item";
+    taskInput.placeholder = "Aufgabe oder Unterpunkt";
+    taskItem.appendChild(taskInput);
+    taskList.appendChild(taskItem);
+
+    const addTaskBtn = document.createElement("button");
+    addTaskBtn.textContent = "+ Aufgabe hinzufügen";
+    addTaskBtn.className = "add-task";
+    addTaskBtn.onclick = () => {
+      const newTask = document.createElement("li");
+      const newInput = document.createElement("input");
+      newInput.type = "text";
+      newInput.className = "task-item";
+      newInput.placeholder = "Aufgabe oder Unterpunkt";
+      newTask.appendChild(newInput);
+      taskList.appendChild(newTask);
+    };
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "🗑️ Aktivität löschen";
+    deleteBtn.className = "delete-activity";
+    deleteBtn.onclick = () => wrapper.remove();
+
+    wrapper.appendChild(title);
+    wrapper.appendChild(desc);
+    wrapper.appendChild(taskList);
+    wrapper.appendChild(addTaskBtn);
+    wrapper.appendChild(deleteBtn);
+    wrapper.appendChild(document.createElement("hr"));
+
+    return wrapper;
+  }
+
+  addButton.onclick = () => {
+    const newActivity = createActivityElement();
+    container.appendChild(newActivity);
+  };
+});
+    </script></body>
 </html>
