@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Einarbeitung Auszubildende</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Einarbeitung Auszubildende</h1>
+    <div id="role-selection">
+        <button onclick="setRole('ausbilderin')">Ich bin Ausbilderin</button>
+        <button onclick="setRole('auszubildende')">Ich bin Auszubildende</button>
+    </div>
+    <div id="main-content" style="display:none;">
+        <div id="basis-info" style="display:none;">
+            <h2>Basisinformationen</h2>
+            <label>Name der Auszubildenden: <input id="name" type="text"></label><br>
+            <label>Zeitraum der Ausbildung: <input id="zeitraum" type="text"></label><br>
+            <label>Freitext: <textarea id="freitext"></textarea></label><br>
+            <button onclick="saveBasisInfo()">Speichern</button>
+        </div>
+        <div id="lernfelder"></div>
+    </div>
+    <script src="script.js"></script>
+
+  <div id="lernfelderContainer"></div>
+</body>
+</html>

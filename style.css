@@ -1,0 +1,91 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1, h2 {
+    color: #2c3e50;
+}
+.lernfeld {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.aktivitaet {
+    margin-left: 20px;
+}
+.icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.rot { background-color: red; }
+.orange { background-color: orange; }
+.gelb { background-color: yellow; }
+.gruen { background-color: green; }
+textarea {
+    width: 100%;
+    height: 60px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    header, .container, .content, .activity, .feedback, .comment {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .activity {
+        margin-bottom: 20px;
+    }
+
+    .progress-icons {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .progress-icon {
+        width: 40px;
+        height: 40px;
+        margin: 5px;
+        font-size: 20px;
+    }
+
+    textarea, input[type="text"], input[type="date"] {
+        width: 100%;
+        font-size: 16px;
+        padding: 8px;
+        margin-top: 5px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .field-title {
+        font-size: 18px;
+    }
+
+    .activity-title {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .activity-description {
+        font-size: 14px;
+    }
+}
