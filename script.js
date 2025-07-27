@@ -1,70 +1,116 @@
 const lernfelder = [
   {
-    "title": "Lernfeld 1: Patientenempfang und -betreuung",
+    "title": "1. Praxisorganisation und -verwaltung",
     "activities": [
       {
-        "title": "Empfang und Begr\u00fc\u00dfung",
-        "description": "Die Auszubildende begr\u00fc\u00dft Patient:innen freundlich, \u00fcberpr\u00fcft Termine und leitet sie weiter."
+        "title": "Terminmanagement",
+        "description": "Die Auszubildende plant, koordiniert und dokumentiert Patiententermine unter Berücksichtigung von Dringlichkeit und Behandlungsart.",
+        "subtasks": [
+          "Terminvergabe telefonisch",
+          "Online-Terminbuchung verwalten",
+          "Terminkalender führen"
+        ]
       },
       {
-        "title": "Anamnesebogen aush\u00e4ndigen",
-        "description": "Die Auszubildende erkl\u00e4rt neuen Patient:innen den Anamnesebogen und hilft bei R\u00fcckfragen."
-      },
-      {
-        "title": "Telefonische Terminvergabe",
-        "description": "Die Auszubildende nimmt Anrufe entgegen und vergibt Termine nach Vorgabe."
+        "title": "Patientenaufnahme",
+        "description": "Die Auszubildende nimmt Patientendaten auf, prüft Versicherungskarten und erstellt Patientenakten.",
+        "subtasks": [
+          "Versicherungskarte einlesen",
+          "Stammdaten erfassen",
+          "Anamnesebogen aushändigen"
+        ]
       }
     ]
   },
   {
-    "title": "Lernfeld 2: Assistenz bei Diagnostik und Therapie",
+    "title": "2. Assistenz bei diagnostischen und therapeutischen Maßnahmen",
     "activities": [
       {
-        "title": "Assistenz bei Hautbiopsien",
-        "description": "Die Auszubildende bereitet das Material vor und assistiert bei der Durchf\u00fchrung von Stanzen und Shaves."
+        "title": "Assistenz bei Eingriffen",
+        "description": "Die Auszubildende assistiert bei verschiedenen dermatologischen Eingriffen wie OP, Shave, Stanze.",
+        "subtasks": [
+          "Instrumente vorbereiten",
+          "Sterilität sicherstellen",
+          "Assistenz während des Eingriffs"
+        ]
       },
       {
-        "title": "Vorbereitung von Injektionen",
-        "description": "Die Auszubildende richtet Spritzen und desinfiziert die Hautstelle nach Anweisung."
+        "title": "Wundversorgung",
+        "description": "Die Auszubildende führt einfache Wundversorgungen durch und dokumentiert diese.",
+        "subtasks": [
+          "Wunde reinigen",
+          "Verband anlegen",
+          "Dokumentation im System"
+        ]
       }
     ]
   },
   {
-    "title": "Lernfeld 3: Hygiene und Aufbereitung",
+    "title": "3. Kommunikation und Patientenbetreuung",
     "activities": [
       {
-        "title": "Instrumentenaufbereitung",
-        "description": "Die Auszubildende reinigt, desinfiziert und sterilisiert Instrumente nach Hygieneplan."
+        "title": "Aufklärungsgespräche vorbereiten",
+        "description": "Die Auszubildende bereitet Materialien und Räume für ärztliche Aufklärungsgespräche vor.",
+        "subtasks": [
+          "Informationsmaterial bereitstellen",
+          "Aufklärungsbogen vorbereiten",
+          "Raum vorbereiten"
+        ]
       },
       {
-        "title": "Fl\u00e4chendesinfektion",
-        "description": "Die Auszubildende f\u00fchrt die Desinfektion von Liegen, Arbeitsfl\u00e4chen und Ger\u00e4ten durch."
+        "title": "Umgang mit schwierigen Gesprächssituationen",
+        "description": "Die Auszubildende lernt, empathisch und professionell auf Patientenanliegen einzugehen.",
+        "subtasks": [
+          "Aktives Zuhören",
+          "Deeskalationstechniken",
+          "Dokumentation von Beschwerden"
+        ]
       }
     ]
   },
   {
-    "title": "Lernfeld 4: Verwaltung und Dokumentation",
+    "title": "4. Hygiene und Qualitätsmanagement",
     "activities": [
       {
-        "title": "Patientendaten erfassen",
-        "description": "Die Auszubildende tr\u00e4gt Stammdaten in die Praxissoftware ein und pr\u00fcft die Versicherungskarte."
+        "title": "Hygieneplan umsetzen",
+        "description": "Die Auszubildende kennt den Hygieneplan der Praxis und setzt ihn im Alltag um.",
+        "subtasks": [
+          "Händedesinfektion korrekt durchführen",
+          "Flächendesinfektion",
+          "Geräteaufbereitung"
+        ]
       },
       {
-        "title": "Abrechnung vorbereiten",
-        "description": "Die Auszubildende unterst\u00fctzt bei der Vorbereitung der Abrechnung nach GO\u00c4 und EBM."
+        "title": "Qualitätsdokumentation",
+        "description": "Die Auszubildende dokumentiert qualitätsrelevante Maßnahmen gemäß QM-Handbuch.",
+        "subtasks": [
+          "Checklisten ausfüllen",
+          "Abweichungen melden",
+          "QM-Dokumente pflegen"
+        ]
       }
     ]
   },
   {
-    "title": "Lernfeld 5: Kommunikation und Teamarbeit",
+    "title": "5. Abrechnung und Dokumentation",
     "activities": [
       {
-        "title": "Besprechungsvorbereitung",
-        "description": "Die Auszubildende bereitet interne Teambesprechungen vor und dokumentiert Ergebnisse."
+        "title": "Leistungserfassung",
+        "description": "Die Auszubildende erfasst ärztliche Leistungen korrekt im Praxisverwaltungssystem.",
+        "subtasks": [
+          "GOÄ-Ziffern zuordnen",
+          "Leistungen dokumentieren",
+          "Abrechnungsprüfung"
+        ]
       },
       {
-        "title": "Feedbackgespr\u00e4che f\u00fchren",
-        "description": "Die Auszubildende reflektiert ihre Arbeit und nimmt an Feedbackgespr\u00e4chen teil."
+        "title": "Privatabrechnung",
+        "description": "Die Auszubildende erstellt Rechnungen für Privatpatienten und beantwortet Rückfragen.",
+        "subtasks": [
+          "Rechnung erstellen",
+          "Zahlungseingänge prüfen",
+          "Rückfragen beantworten"
+        ]
       }
     ]
   }
@@ -95,6 +141,7 @@ function saveBasisInfo() {
 }
 
 
+
 function renderLernfelder() {
   const container = document.getElementById("lernfelderContainer");
   container.innerHTML = "";
@@ -119,40 +166,50 @@ function renderLernfelder() {
       actDesc.textContent = activity.description;
       actDiv.appendChild(actDesc);
 
-      const progressLabel = document.createElement("label");
-      progressLabel.textContent = "Einschätzung:";
-      actDiv.appendChild(progressLabel);
-
-      const progressContainer = document.createElement("div");
-      progressContainer.className = "progress-icons";
-
-      ["rot", "orange", "gelb", "grün"].forEach(color => {
-        const icon = document.createElement("span");
-        icon.className = "circle " + color;
-        icon.title = color;
-        icon.onclick = () => {
-          document.querySelectorAll(".circle").forEach(c => c.classList.remove("selected"));
-          icon.classList.add("selected");
-        };
-        progressContainer.appendChild(icon);
+      const subList = document.createElement("ul");
+      activity.subtasks.forEach(sub => {
+        const li = document.createElement("li");
+        li.textContent = sub;
+        subList.appendChild(li);
       });
+      actDiv.appendChild(subList);
 
-      actDiv.appendChild(progressContainer);
+      const statusDiv = document.createElement("div");
+      statusDiv.className = "status-icons";
+      const colors = ["red", "orange", "yellow", "green"];
+      const savedStatus = localStorage.getItem(`status_${feldIndex}_${actIndex}`) || "red";
+
+      colors.forEach(color => {
+        const icon = document.createElement("span");
+        icon.className = "status-icon";
+        icon.style.backgroundColor = color;
+        if (color === savedStatus) icon.classList.add("selected");
+        icon.addEventListener("click", () => {
+          localStorage.setItem(`status_${feldIndex}_${actIndex}`, color);
+          renderLernfelder();
+        });
+        statusDiv.appendChild(icon);
+      });
+      actDiv.appendChild(statusDiv);
 
       const commentLabel = document.createElement("label");
       commentLabel.textContent = "Kommentar (Auszubildende):";
-      actDiv.appendChild(commentLabel);
-
       const commentBox = document.createElement("textarea");
-      commentBox.rows = 2;
+      commentBox.value = localStorage.getItem(`comment_${feldIndex}_${actIndex}`) || "";
+      commentBox.addEventListener("input", () => {
+        localStorage.setItem(`comment_${feldIndex}_${actIndex}`, commentBox.value);
+      });
+      actDiv.appendChild(commentLabel);
       actDiv.appendChild(commentBox);
 
       const feedbackLabel = document.createElement("label");
       feedbackLabel.textContent = "Feedback (Ausbilderin):";
-      actDiv.appendChild(feedbackLabel);
-
       const feedbackBox = document.createElement("textarea");
-      feedbackBox.rows = 2;
+      feedbackBox.value = localStorage.getItem(`feedback_${feldIndex}_${actIndex}`) || "";
+      feedbackBox.addEventListener("input", () => {
+        localStorage.setItem(`feedback_${feldIndex}_${actIndex}`, feedbackBox.value);
+      });
+      actDiv.appendChild(feedbackLabel);
       actDiv.appendChild(feedbackBox);
 
       feldDiv.appendChild(actDiv);
@@ -161,6 +218,7 @@ function renderLernfelder() {
     container.appendChild(feldDiv);
   });
 }
+
 
 
 function setStatus(key, farbe) {

@@ -1,59 +1,29 @@
 
 <!DOCTYPE html>
-
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<title>Einarbeitung Auszubildende</title>
-<link href="style.css" rel="stylesheet"/>
+    <meta charset="UTF-8">
+    <title>Einarbeitung Auszubildende</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Einarbeitung Auszubildende</h1>
+    <div id="role-selection">
+        <button onclick="setRole('ausbilderin')">Ich bin Ausbilderin</button>
+        <button onclick="setRole('auszubildende')">Ich bin Auszubildende</button>
+    </div>
+    <div id="main-content" style="display:none;">
+        <div id="basis-info" style="display:none;">
+            <h2>Basisinformationen</h2>
+            <label>Name der Auszubildenden: <input id="name" type="text"></label><br>
+            <label>Zeitraum der Ausbildung: <input id="zeitraum" type="text"></label><br>
+            <label>Freitext: <textarea id="freitext"></textarea></label><br>
+            <button onclick="saveBasisInfo()">Speichern</button>
+        </div>
+        <div id="lernfelder"></div>
+    </div>
+    <script src="script.js"></script>
 
-<div id="role-selection" style="margin-bottom: 20px;">
-  <label for="role">Rolle auswählen:</label>
-  <select id="role" onchange="setRole(this.value)">
-    <option value="azubi">Auszubildende</option>
-    <option value="ausbilderin">Ausbilderin</option>
-  </select>
-</div>
-<script>
-  function setRole(role) {
-    localStorage.setItem('userRole', role);
-    location.reload();
-  }
-
-  function getRole() {
-    return localStorage.getItem('userRole') || 'azubi';
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const role = getRole();
-    document.getElementById('role').value = role;
-    document.body.classList.add(role);
-  });
-</script>
-
-<h1>Einarbeitung Auszubildende</h1>
-<div id="role-selection">
-<button onclick="setRole('ausbilderin')">Ich bin Ausbilderin</button>
-<button onclick="setRole('auszubildende')">Ich bin Auszubildende</button>
-</div>
-<div id="main-content" style="display:none;">
-<div id="basis-info" style="display:none;">
-<h2>Basisinformationen</h2>
-<label>Name der Auszubildenden: <input id="name" type="text"/></label><br/>
-<label>Zeitraum der Ausbildung: <input id="zeitraum" type="text"/></label><br/>
-<label>Freitext: <textarea id="freitext"></textarea></label><br/>
-<button onclick="saveBasisInfo()">Speichern</button>
-</div>
-<div id="lernfelder"></div>
-</div>
-<script src="script.js"></script>
-<div id="lernfelderContainer"></div>
-<ul><li><a href="medizinische_assistenz.html">Medizinische Assistenz</a></li>
-<li><a href="ordnung_und_sauberkeit.html">Ordnung &amp; Sauberkeit</a></li>
-<li><a href="praxisorganisation.html">Praxisorganisation</a></li>
-<li><a href="praxisadministration.html">Praxisadministration</a></li>
-<li><a href="sonstiges.html">Sonstiges</a></li></ul>
+  <div id="lernfelderContainer"></div>
 </body>
 </html>
