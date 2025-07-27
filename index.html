@@ -1,29 +1,81 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <title>Einarbeitung Auszubildende</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Startseite - AusbildungsApp</title>
+    <style>
+        body { font-family: sans-serif; margin: 2em; }
+        .lernfeld-link { display: block; margin: 0.5em 0; }
+        .progress-icon { width: 1em; height: 1em; border-radius: 50%; display: inline-block; margin-right: 0.5em; }
+        .rot { background: red; }
+        .orange { background: orange; }
+        .gelb { background: yellow; }
+        .gruen { background: green; }
+    </style>
 </head>
 <body>
-    <h1>Einarbeitung Auszubildende</h1>
-    <div id="role-selection">
-        <button onclick="setRole('ausbilderin')">Ich bin Ausbilderin</button>
-        <button onclick="setRole('auszubildende')">Ich bin Auszubildende</button>
-    </div>
-    <div id="main-content" style="display:none;">
-        <div id="basis-info" style="display:none;">
-            <h2>Basisinformationen</h2>
-            <label>Name der Auszubildenden: <input id="name" type="text"></label><br>
-            <label>Zeitraum der Ausbildung: <input id="zeitraum" type="text"></label><br>
-            <label>Freitext: <textarea id="freitext"></textarea></label><br>
-            <button onclick="saveBasisInfo()">Speichern</button>
-        </div>
-        <div id="lernfelder"></div>
-    </div>
-    <script src="script.js"></script>
+    <h1>Willkommen zur AusbildungsApp</h1>
+    <label>Rolle wählen:
+        <select id="roleSelect" onchange="saveRole(this.value)">
+            <option value="auszubildende">Auszubildende</option>
+            <option value="ausbilderin">Ausbilderin</option>
+        </select>
+    </label>
+    <h2>Basisinformationen</h2>
+    <label>Name der Auszubildenden: <input type="text" id="nameInput"></label><br>
+    <label>Zeitraum der Ausbildung: <input type="text" id="zeitraumInput"></label><br>
+    <label>Notizen:<br><textarea id="notesInput" rows="4" cols="50"></textarea></label><br>
+    <button onclick="saveBaseInfo()">Speichern</button>
 
-  <div id="lernfelderContainer"></div>
+    <h2>Fortschrittsübersicht</h2>
+    <div id="progressOverview"></div>
+
+    <h2>Lernfelder</h2>
+    <div id="lernfelderLinks"></div>
+
+    <script>
+        const lernfelder = [
+            { id: "medizinische_assistenz", name: "Medizinische Assistenz" },
+            { id: "ordnung_sauberkeit", name: "Ordnung & Sauberkeit" },
+            { id: "praxisorganisation", name: "Praxisorganisation" },
+            { id: "praxisadministration", name: "Praxisadministration" },
+            { id: "sonstiges", name: "Sonstiges" }
+        ];
+
+        function saveRole(role) {
+            localStorage.setItem("rolle", role);
+        }
+
+        function saveBaseInfo() {
+            localStorage.setItem("azubi_name", document.getElementById("nameInput").value);
+            localStorage.setItem("azubi_zeitraum", document.getElementById("zeitraumInput").value);
+            localStorage.setItem("azubi_notes", document.getElementById("notesInput").value);
+            alert("Informationen gespeichert.");
+        }
+
+        function loadProgress() {
+            const container = document.getElementById("progressOverview");
+            container.innerHTML = "";
+            lernfelder.forEach(lf => {
+                const div = document.createElement("div");
+                div.innerHTML = `<strong>${lf.name}</strong>: <span class="progress-icon rot" title="keine Einschätzung"></span>`;
+                container.appendChild(div);
+            });
+        }
+
+        function loadLernfelderLinks() {
+            const container = document.getElementById("lernfelderLinks");
+            lernfelder.forEach(lf => {
+                const link = document.createElement("a");
+                link.href = lf.id + ".html";
+                link.className = "lernfeld-link";
+                link.textContent = lf.name;
+                container.appendChild(link);
+            });
+        }
+
+        loadProgress();
+        loadLernfelderLinks();
+    </script>
 </body>
 </html>

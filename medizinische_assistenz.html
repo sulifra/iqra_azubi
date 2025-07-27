@@ -1,12 +1,24 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<title>Medizinische Assistenz</title>
+    <meta charset="UTF-8">
+    <title>Medizinische Assistenz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-<h1>Medizinische Assistenz</h1>
-<p>Hier können Aktivitäten, Einschätzungen und Kommentare für das Lernfeld <strong>Medizinische Assistenz</strong> eingetragen werden.</p>
+    <header>
+        <h1>Medizinische Assistenz</h1>
+        <nav><a href="index.html">Zurück zur Startseite</a></nav>
+    </header>
+    <main>
+        <div class="activity-list" data-lernfeld="Medizinische Assistenz">
+            <!-- Aktivitäten werden hier dynamisch eingefügt -->
+        </div>
+        <div class="controls ausbilderin-only">
+            <button onclick="addActivity('Medizinische Assistenz')">+ Neue Aktivität hinzufügen</button>
+        </div>
+    </main>
 </body>
 </html>

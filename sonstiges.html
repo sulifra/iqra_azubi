@@ -1,12 +1,24 @@
-<!DOCTYPE html>
 
+<!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="utf-8"/>
-<title>Sonstiges</title>
+    <meta charset="UTF-8">
+    <title>Sonstiges</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-<h1>Sonstiges</h1>
-<p>Hier können Aktivitäten, Einschätzungen und Kommentare für das Lernfeld <strong>Sonstiges</strong> eingetragen werden.</p>
+    <header>
+        <h1>Sonstiges</h1>
+        <nav><a href="index.html">Zurück zur Startseite</a></nav>
+    </header>
+    <main>
+        <div class="activity-list" data-lernfeld="Sonstiges">
+            <!-- Aktivitäten werden hier dynamisch eingefügt -->
+        </div>
+        <div class="controls ausbilderin-only">
+            <button onclick="addActivity('Sonstiges')">+ Neue Aktivität hinzufügen</button>
+        </div>
+    </main>
 </body>
 </html>
